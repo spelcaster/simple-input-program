@@ -2,7 +2,7 @@
 #include <string.h>  /* memset */
 #include <stdlib.h>  /* qsort */
 
-int isValid(int, int*, size_t count);
+int is_valid(int, int*, size_t count);
 
 int compare(const void*, const void*);
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
         printf(">> ");
         scanf("%d", &input);
 
-        if (isValid(input, sequence, count)) {
+        if (is_valid(input, sequence, count)) {
             sequence[i] = input;
             i++;
             continue;
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-int isValid(int number, int *sequence, size_t count) {
+int is_valid(int number, int *sequence, size_t count) {
     for (int i = 0; i < count; i++) {
         if (number == (sequence[i])) {
             return 0;
